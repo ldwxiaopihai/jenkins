@@ -17,15 +17,16 @@ public class HelloController {
 
 
     @RequestMapping("/hello")
-    @ResponseBody
+
     public String hello() {
-        return "Hello World";
+        return "/service.html";
+
     }
 
-    @RequestMapping("/")
-    public String index(ModelMap map) {
-        map.addAttribute("host", "http://blog.didispace.com");
-        return "index";
+    @RequestMapping("/index")
+    @ResponseBody
+    public String index() {
+        return "Hello World";
     }
 
 }
